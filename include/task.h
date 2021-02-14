@@ -1530,6 +1530,22 @@ UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTIO
  */
 uint8_t* pxTaskGetStackStart( TaskHandle_t xTask) PRIVILEGED_FUNCTION;
 
+/**
+ * task.h
+ * <PRE>uint8_t* pxTaskGetStackEnd( TaskHandle_t xTask);</PRE>
+ *
+ * INCLUDE_pxTaskGetStackEnd must be set to 1 in FreeRTOSConfig.h for
+ * this function to be available.
+ *
+ * Returns the end of the stack associated with xTask.
+ *
+ * @param xTask Handle of the task associated with the stack returned.
+ * Set xTask to NULL to return the stack of the calling task.
+ *
+ * @return A pointer to the end of the stack.
+ */
+uint8_t* pxTaskGetStackEnd( TaskHandle_t xTask) PRIVILEGED_FUNCTION;
+
 
 /**
  * task.h
